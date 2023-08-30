@@ -1,0 +1,35 @@
+{
+  "name": "web",
+  "private": true,
+  "version": "0.0.1",
+  "sideEffects": [
+    "**/*.scss"
+  ],
+  "scripts": {
+    "dev": "qwebpack dev ./webpack/qiao-webpack.dev.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2"
+  },
+  "nx": {
+    "namedInputs": {
+      "default": [
+        "{projectRoot}/src/**/*",
+        "{projectRoot}/webpack/**/*"
+      ]
+    },
+    "targets": {
+      "build": {
+        "inputs": [
+          "default"
+        ],
+        "outputs": [
+          "{workspaceRoot}/packages/photos-server/static/**/*",
+          "{workspaceRoot}/packages/photos-server/views/**/*"
+        ]
+      }
+    }
+  }
+}

@@ -12,7 +12,8 @@
     "pb": "lerna publish",
     "graph": "nx graph",
     "check": "ncu && lerna exec ncu --concurrency=1",
-    "update": "ncu -u && lerna exec 'ncu -u' --concurrency=1"
+    "update": "ncu -u && lerna exec 'ncu -u' --concurrency=1",
+    "start": "npm run dev -w web"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
@@ -30,6 +31,7 @@
     "lint-staged": "^13.2.3",
     "nx": "^16.5.3",
     "prettier": "^3.0.0",
+    "qiao-webpack": "^3.3.7",
     "rollup": "^3.26.3"
   }
 }
