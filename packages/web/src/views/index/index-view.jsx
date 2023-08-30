@@ -13,7 +13,7 @@ import { Index } from '@components/button';
  */
 const IndexView = () => {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider theme={{ colorScheme: 'dark' }}>
       <div className="container">
         <Index />
       </div>
