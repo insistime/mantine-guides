@@ -1,12 +1,17 @@
 // react
 import React from 'react';
 
-// mantine
-import { Button } from '@mantine/core';
+// styles
+import { useStyles } from './index-styles.js';
 
 /**
  * Index
  */
 export const Index = () => {
-  return <Button>Click me!</Button>;
+  const { classes } = useStyles();
+  return (
+    <div className={classes.wrapper}>
+      <div className={classes.child}>createStyles demo</div>
+    </div>
+  );
 };
